@@ -21,7 +21,10 @@ export const viewport: Viewport = { colorScheme: 'dark', themeColor: '#101714', 
 const jsonLd = { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebSite', name: 'La Casino Guide', url: siteUrl, inLanguage: 'ru-RU' }, { '@type': 'Article', headline: 'La Casino: официальный сайт и честный гид игрока', description: 'Практичный русскоязычный гид по доступу, играм и ответственной игре.', url: siteUrl, dateModified: '2026-09-15', inLanguage: 'ru-RU', author: { '@type': 'Organization', name: 'La Casino Guide' } }] }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ru" className="bg-background"><head><link rel="canonical" href={siteUrl} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  return <html lang="ru" className="bg-background">
+    <head>
+      <meta name="yandex-verification" content="c89329551e8ed3cf" />
+    <link rel="canonical" href={siteUrl} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <script
   dangerouslySetInnerHTML={{
     __html: `
